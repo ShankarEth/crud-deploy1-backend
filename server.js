@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const studentRoute = require('./controller/studentRoute');
 
 mongoose.set('strictQuery',true);
-mongoose.connect('mongodb://127.0.0.1:27017/schooldb');
+mongoose.connect('mongodb+srv://test:12345@cluster0.x5oucj4.mongodb.net/schooldb');
 var db= mongoose.connection;
 db.on('error',()=>console.log("error occured"));
 db.once("open",()=>console.log('Connected to database'));
